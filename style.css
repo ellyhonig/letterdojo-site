@@ -1,0 +1,267 @@
+/*
+ * Stylesheet for the LetterDojo landing page.
+ *
+ * The design reflects the modern, professional aesthetics of the pitch deck
+ * with dark and light sections, clean typography and vibrant accent colours.
+ * It is fully responsive and adapts gracefully from desktop to mobile.
+ */
+
+/* Reset some basic elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  line-height: 1.6;
+  color: #030A18;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.65);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin-left: 10%;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #1F6BBA;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #164f8d;
+}
+
+.btn-light {
+  background-color: #ffffff;
+  color: #1F6BBA;
+}
+
+.btn-light:hover {
+  background-color: #e5ecf8;
+}
+
+/* Section base styles */
+.section {
+  padding: 4rem 0;
+}
+
+.dark-bg {
+  background-color: #030A18;
+  color: #ffffff;
+}
+
+.light-bg {
+  background-color: #f5f5f5;
+  color: #030A18;
+}
+
+.accent-bg {
+  background-color: #1F6BBA;
+  color: #ffffff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Cards section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.dark-bg .card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.light-bg .card {
+  background-color: #ffffff;
+  border: 1px solid #e0e7f1;
+}
+
+.card i {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: #1F6BBA;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Two columns layout */
+.two-columns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.two-columns .text {
+  flex: 1 1 400px;
+  min-width: 260px;
+}
+
+.two-columns .image-container {
+  flex: 1 1 300px;
+  min-width: 260px;
+}
+
+.two-columns ul {
+  margin-top: 1rem;
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.two-columns ul li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.two-columns ul li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1F6BBA;
+  font-weight: bold;
+}
+
+/* Pricing section */
+#pricing p {
+  font-size: 1rem;
+  max-width: 800px;
+}
+
+/* CTA section */
+#cta {
+  text-align: center;
+}
+
+#cta p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #0b1830;
+  color: #ffffff;
+  padding: 1.5rem 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.footnotes {
+  margin-bottom: 0.5rem;
+}
+
+.footnotes a {
+  color: #8fa5c6;
+  margin-right: 0.5rem;
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+
+.footnotes a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .section {
+    padding: 3rem 0;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .two-columns {
+    flex-direction: column;
+  }
+}
